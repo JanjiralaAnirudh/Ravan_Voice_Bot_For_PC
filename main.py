@@ -94,7 +94,7 @@ def run_query(command):
         functions.talk("it doesn't programmed or i don't know")    
 
 try:
-    functions.talk("hai this is arey aagam\nhow can i help you")
+    functions.talk("hai this is arey Ravan\nhow can i help you")
     with speech_recognition.Microphone() as source:
         print("now u can speak")
         voice = listener.listen(source)
@@ -103,7 +103,7 @@ try:
         print(query)
         if (("last" in query) and ("query" in query)) or (("previous" in query) and ("query" in query)) or (("previous" in query) and ("command" in query)) or (("last" in query) and ("command" in query)):
             run_query(query)
-        else :
+        else :                
             functions.save_query_to_csv(query)
             run_query(query)
 except:
